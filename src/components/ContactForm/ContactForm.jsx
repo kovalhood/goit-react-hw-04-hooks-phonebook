@@ -26,14 +26,6 @@ function ContactForm(props) {
         resetForm();
         }, 10);
     };
-    
-    // const handleNameChange = event => {
-    //     setName(event.currentTarget.value);
-    // };
-
-    // const handleNumberChange = event => {
-    //     setNumber(event.currentTarget.value);
-    // };
 
     const handleChange = event => {
         const { name, value } = event.currentTarget;

@@ -57,7 +57,6 @@ function App() {
             </Section>
         </Wrapper>
     )
-    
 }
 
 export default App;
