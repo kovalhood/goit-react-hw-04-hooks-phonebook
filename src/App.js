@@ -1,22 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Wrapper from "components/Wrapper";
 import Section from "components/Section";
 import ContactForm from 'components/ContactForm';
 import Filter from 'components/Filter';
 import ContactList from 'components/ContactList';
 import Notification from 'components/Notification';
-
-const useLocalStorage = (key, defaultValue) => {
-    const [state, setState] = useState(() => {
-        return JSON.parse(localStorage.getItem(key)) ?? defaultValue;
-    });
-
-    useEffect(() => {
-        localStorage.setItem(key, JSON.stringify(state))
-    }, [key, state])
-
-    return [state, setState];
-}
+import useLocalStorage from 'hooks/useLocalStorage';
 
 function App() {
     const [contacts, setContacts] = useLocalStorage('contacts', []);
